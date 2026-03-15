@@ -4,5 +4,5 @@ torchvision
 numpy
 opencv-python-headless
 pillow
-dlib
+dlib-bin
 stone
