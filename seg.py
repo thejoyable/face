@@ -188,14 +188,25 @@ st.write("Using webcam with LinkNet segmentation")
 webrtc_streamer(
     key="face-segmentation",
     video_processor_factory=FaceSegmentation,
+
     media_stream_constraints={
         "video": True,
         "audio": False
     },
+
     rtc_configuration={
         "iceServers": [
             {"urls": ["stun:stun.l.google.com:19302"]},
             {"urls": ["stun:stun1.l.google.com:19302"]},
+            {"urls": ["stun:stun2.l.google.com:19302"]},
+
+            {
+                "urls": "turn:openrelay.metered.ca:80",
+                "username": "openrelayproject",
+                "credential": "openrelayproject"
+            },
         ]
-    }
+    },
+
+    async_processing=True
 )
