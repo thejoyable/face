@@ -191,5 +191,11 @@ webrtc_streamer(
     media_stream_constraints={
         "video": True,
         "audio": False
+    },
+    rtc_configuration={
+        "iceServers": [
+            {"urls": ["stun:stun.l.google.com:19302"]},
+            {"urls": ["stun:stun1.l.google.com:19302"]},
+        ]
     }
 )
