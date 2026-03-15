@@ -5,4 +5,4 @@ numpy
 opencv-python-headless
 pillow
 dlib-bin
-stone
+git+https://github.com/ChenglongMa/SkinToneClassifier.git
